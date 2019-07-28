@@ -1,0 +1,19 @@
+﻿<Window x:Class="DraggableTeaxtBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DraggableTeaxtBox"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:draggableTextBox="clr-namespace:DraggableTextBox"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas Background="Aqua" Height="450" Width="800">
+        <TextBox Name="TextBox1" MinWidth="100" MinHeight="50">
+            <i:Interaction.Behaviors>
+                <draggableTextBox:TextBoxDragBehavior/>
+            </i:Interaction.Behaviors>
+        </TextBox>
+        <Button Canvas.Top="200" Canvas.Left="200" Width="100" Height="200"/>
+    </Canvas>
+</Window>
